@@ -57,3 +57,27 @@ In your Xcode project directory, install the dependencies by running the followi
 Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of the project file when building your project:
     
     $ open Jumpstart.xcworkspace
+
+### Use the Mobile API
+
+#### Call a controller
+
+Make the following changes to `ViewController.m`:
+
+    // Import the header
+    #import "HelloWorldController.h"
+    
+    // Initialize and call the controller
+    - (void)viewDidLoad
+    {
+        [super viewDidLoad];
+	    // Initialize controller
+        HelloWorldController *helloWorldController = [[HelloWorldController alloc] init];
+        // Call controller
+        [helloWorldController getHello:@"Magnet" options:nil success:^(NSString *response) {
+            NSLog(@"response = %@", response); // executed if the Mobile Backend returns a valid response
+        } failure:^(NSError *error) {
+            NSLog(@"error = %@", error); // // executed if the Mobile Backend returns an error
+        }];
+    }
+

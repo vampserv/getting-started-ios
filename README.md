@@ -77,7 +77,7 @@ Make the following changes to `ViewController.m`:
         [helloWorldController getHello:@"Magnet" options:nil success:^(NSString *response) {
             NSLog(@"response = %@", response); // executed if the Mobile Backend returns a valid response
         } failure:^(NSError *error) {
-            NSLog(@"error = %@", error); // // executed if the Mobile Backend returns an error
+            NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
         }];
     }
 

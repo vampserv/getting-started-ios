@@ -19,6 +19,5 @@ To build the Jumpstart server, you can run the following MAB command:
 Create a Single View Application using Xcode:
 ![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Create-Project.png)
 
-### Build Jumpstart App
-
-Make sure to always open the Xcode workspace (JumpStartApp.xcworkspace) instead of the project file (JumpStartApp.xcodeproj) when building your project.
+### Generate the mobile assets using CocoaPods
+If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org

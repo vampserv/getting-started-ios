@@ -9,7 +9,7 @@ In this tutorial, you will learn how to build a "Jumpstart" iOS app that interac
 2. Xcode 5
 3. CocoaPods
 
-### Build the server
+### Build the Mobile Backend
 
 To build the Jumpstart server, you can run the following MAB command:
 

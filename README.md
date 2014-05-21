@@ -9,17 +9,17 @@ In this tutorial, you will learn how to build a "Jumpstart" iOS app that interac
 2. Xcode 5
 3. CocoaPods
 
-### Build the Mobile Backend
+###1. Build the Mobile Backend
 
 To build the Jumpstart server, you can run the following command on the Mobile App Builder tool:
 
     jumpstart@local:mab> run jumpstart.mab
 
-### Create Xcode project
+###2. Create Xcode project
 Create a new Single View Application called "Jumpstart" using Xcode:
 ![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Create-Project-Wizard.png)
 
-### Import dependencies using CocoaPods
+###3. Import dependencies using CocoaPods
 
 #### Generate the Mobile API
 You can generate the mobile API by running the following command on the Mobile App Builder tool:
@@ -58,7 +58,7 @@ Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of 
     
     $ open Jumpstart.xcworkspace
 
-### Use the Mobile API
+###4. Use the Mobile API
 
 #### Call a sample HelloWorld controller
 

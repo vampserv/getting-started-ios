@@ -4,36 +4,36 @@ The Magnet Jumpstart App for iOS is licensed under the terms of the [Magnet Soft
 
 In this tutorial, you will learn how to build a "Jumpstart" iOS app that interacts with a "Jumpstart" Mobile Backend running locally.
 
-### Prerequisites
+###1. Prerequisites
 1. Mobile App Builder tool
 2. Xcode 5
 3. CocoaPods
 
-###1. Build the Mobile Backend
+###2. Build the Mobile Backend
 
 To build the Jumpstart server, you can run the following command on the Mobile App Builder tool:
 
     jumpstart@local:mab> run jumpstart.mab
 
-###2. Create Xcode project
+###3. Create Xcode project
 Create a new Single View Application called "Jumpstart" using Xcode:
 ![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Create-Project-Wizard.png)
 
-###3. Import dependencies using CocoaPods
+###4. Import Mobile SDK and Mobile APIs using CocoPods
 
-#### Generate the Mobile API
+#### Generate the Mobile APIs
 You can generate the mobile API by running the following command on the Mobile App Builder tool:
 
     jumpstart@local:mab> api-generate ios
     
 This command would generate the mobile API in the following directory: `~/MABProjects/jumpstart/mobile/apis/assets/ios`
     
-#### Copy the Mobile API
+#### Copy the Mobile APIs
 You can copy the generated mobile API to your Xcode project directory by running the following command on the Mobile App Builder tool:
     
     jumpstart@local:mab> exec cp ~/MABProjects/jumpstart/mobile/apis/assets/ios/Source /path/to/MyProject
 
-#### Create a Podfile
+#### Create Podfile to contain Mobile APIs and Mobile SDK
 Create a Podfile in your Xcode project directory.    
 
     platform :ios, '7.0'
@@ -58,9 +58,9 @@ Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of 
     
     $ open Jumpstart.xcworkspace
 
-###4. Use the Mobile API
+###4. Use the Mobile APIs
 
-#### Call a sample HelloWorld controller
+#### Call the Helloworld controller API
 
 Make the following changes to `ViewController.m`:
 

@@ -28,9 +28,6 @@ You can generate the mobile API by running the following MAB command:
     
 This command would generate the mobile API in the following directory: `~/MABProjects/jumpstart/mobile/apis/assets/ios`
     
-
-If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org
-
 #### Copy the mobile API
 You can copy the generated mobile API to your Xcode project directory by running the following MAB command:
     
@@ -44,6 +41,12 @@ Create a Podfile in your Xcode project directory.
     pod 'MagnetMobileServer', :git => 'git@bitbucket.org:magneteng/magnet-sdk-ios-2.3.0.git'
     pod 'magnet-mobile-assets', :path => 'Source'
 
-    target :JumpstartTests, :exclusive => true do
-        pod 'Kiwi/XCTest'
-    end
+This would install the Magnet Mobile Server for iOS and your generated mobile API in your project in the next step.
+
+#### Install dependencies
+If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org
+In your Xcode project directory, install the dependencies by running the following command on the terminal:
+
+    $ pod install
+    
+**Note**: Please note that if your installation fails, it may be because you are installing with a version of Git lower than CocoaPods is expecting. Please ensure that you are running Git >= 1.8.0 by executing git --version. You can get a full picture of the installation details by executing pod install --verbose.

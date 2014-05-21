@@ -2,7 +2,7 @@
 
 The Magnet Jumpstart App for iOS is licensed under the terms of the [Magnet Software License Agreement](http://www.magnet.com/resources/tos.html).  Please see [LICENSE](LICENSE) file for full details.
 
-In this tutorial, you will learn how to build a "Jumpstart" iOS app that interacts with a "Jumpstart" server running locally.
+In this tutorial, you will learn how to build a "Jumpstart" iOS app that interacts with a "Jumpstart" Mobile Backend running locally.
 
 ### Prerequisites
 1. MAB tool
@@ -21,14 +21,14 @@ Create a new Single View Application called "Jumpstart" using Xcode:
 
 ### Import dependencies using CocoaPods
 
-#### Generate the mobile API
+#### Generate the Mobile API
 You can generate the mobile API by running the following MAB command:
 
     jumpstart@local:mab> api-generate ios
     
 This command would generate the mobile API in the following directory: `~/MABProjects/jumpstart/mobile/apis/assets/ios`
     
-#### Copy the mobile API
+#### Copy the Mobile API
 You can copy the generated mobile API to your Xcode project directory by running the following MAB command:
     
     jumpstart@local:mab> exec cp ~/MABProjects/jumpstart/mobile/apis/assets/ios/Source /path/to/MyProject
@@ -41,9 +41,10 @@ Create a Podfile in your Xcode project directory.
     pod 'MagnetMobileServer', :git => 'git@bitbucket.org:magneteng/magnet-sdk-ios-2.3.0.git'
     pod 'magnet-mobile-assets', :path => 'Source'
 
-This would install the Magnet Mobile Server for iOS and your generated mobile API in your project in the next step. At this stage, your Xcode project directory structure should look like this:
+This would install the Mobile SDK for iOS and your generated Mobile API in your project in the next step. At this stage, your Xcode project directory structure should look like this:
 ![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Project-Directory-Structure.png)
 
+A sample Podfile is also available in the generated Mobile API here: `~/MABProjects/jumpstart/mobile/apis/assets/ios/Podfile`
 
 #### Install dependencies in your project
 If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org

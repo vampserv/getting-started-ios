@@ -45,10 +45,14 @@ This would install the Magnet Mobile Server for iOS and your generated mobile AP
 ![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Project-Directory-Structure.png)
 
 
-#### Install dependencies
+#### Install dependencies in your project
 If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org
 In your Xcode project directory, install the dependencies by running the following command on the terminal:
 
     $ pod install
     
 **Note**: Please note that if your installation fails, it may be because you are installing with a version of Git lower than CocoaPods is expecting. Please ensure that you are running Git &#62;&#61; 1.8.0 by executing `git --version`. You can get a full picture of the installation details by executing `pod install --verbose`.
+
+Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of the project file when building your project:
+    
+    $ open Jumpstart.xcworkspace

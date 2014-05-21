@@ -13,11 +13,32 @@ In this tutorial, you will learn how to build a "Jumpstart" iOS app that interac
 
 To build the Jumpstart server, you can run the following MAB command:
 
-    $ run jumpstart.mab
+    jumpstart@local:mab> run jumpstart.mab
 
 ### Create Xcode project
-Create a Single View Application using Xcode:
+Create a new Single View Application called "Jumpstart" using Xcode:
 ![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Create-Project.png)
 
-### Generate the mobile assets using CocoaPods
+### Import dependencies using CocoaPods
+
+#### Generate the mobile API
+You can generate the mobile API by running the following MAB command:
+
+    jumpstart@local:mab> api-generate ios
+    
+This command would generate the mobile API in the following directory: `~/MABProjects/jumpstart/mobile/apis/assets/ios`
+    
+
 If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org
+
+#### Create a Podfile
+Create a Podfile in your Xcode project directory.    
+
+    platform :ios, '7.0'
+
+    pod 'MagnetMobileServer', :git => 'git@bitbucket.org:magneteng/magnet-sdk-ios-2.3.0.git'
+    pod 'magnet-mobile-assets', :path => 'Source'
+
+    target :AppTests, :exclusive => true do
+        pod 'Kiwi/XCTest'
+    end

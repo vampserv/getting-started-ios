@@ -2,12 +2,18 @@
 
 The Magnet Jumpstart App for iOS is licensed under the terms of the [Magnet Software License Agreement](http://www.magnet.com/resources/tos.html).  Please see [LICENSE](LICENSE) file for full details.
 
-#### Before you get started, PLEASE NOTE:
+In this tutorial, you will learn how to build a "Jumpstart" iOS app that interacts with a "Jumpstart" server running locally.
 
-In order to be able to login to the Jumpstart server from the Jumpstart app, you will need to have an account on the Magnet Developer Factory and use the same credentials to login to the app.
-Please visit [www.magnet.com](www.magnet.com).
+### Prerequisites:
+1. MAB tool
+2. Xcode 5
+3. CocoaPods
 
-The Magnet Jumpstart server is compatible with the latest published release of the Jumpstart app. Older versions of the Jumpstart app are not guaranteed to work with the current Jumpstart server.
+### Build the server
+
+To build a Jumpstart server, you can run the following MAB command:
+
+    $ run jumpstart.mab
 
 ### Download the source
 

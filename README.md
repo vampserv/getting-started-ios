@@ -31,6 +31,11 @@ This command would generate the mobile API in the following directory: `~/MABPro
 
 If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org
 
+#### Copy the mobile API
+You can copy the generated mobile API to your Xcode project directory by running the following MAB command:
+    
+    jumpstart@local:mab> exec cp ~/MABProjects/jumpstart/mobile/apis/assets/ios/Source /path/to/MyProject
+
 #### Create a Podfile
 Create a Podfile in your Xcode project directory.    
 
@@ -39,6 +44,6 @@ Create a Podfile in your Xcode project directory.
     pod 'MagnetMobileServer', :git => 'git@bitbucket.org:magneteng/magnet-sdk-ios-2.3.0.git'
     pod 'magnet-mobile-assets', :path => 'Source'
 
-    target :AppTests, :exclusive => true do
+    target :JumpstartTests, :exclusive => true do
         pod 'Kiwi/XCTest'
     end

@@ -51,4 +51,4 @@ In your Xcode project directory, install the dependencies by running the followi
 
     $ pod install
     
-**Note**: Please note that if your installation fails, it may be because you are installing with a version of Git lower than CocoaPods is expecting. Please ensure that you are running Git >= 1.8.0 by executing `git --version`. You can get a full picture of the installation details by executing `pod install --verbose`.
+**Note**: Please note that if your installation fails, it may be because you are installing with a version of Git lower than CocoaPods is expecting. Please ensure that you are running Git &#62;&#61; 1.8.0 by executing `git --version`. You can get a full picture of the installation details by executing `pod install --verbose`.

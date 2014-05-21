@@ -17,7 +17,7 @@ To build the Jumpstart server, you can run the following MAB command:
 
 ### Create Xcode project
 Create a new Single View Application called "Jumpstart" using Xcode:
-![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Create-Project.png)
+![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Create-Project-Wizard.png)
 
 ### Import dependencies using CocoaPods
 
@@ -41,7 +41,9 @@ Create a Podfile in your Xcode project directory.
     pod 'MagnetMobileServer', :git => 'git@bitbucket.org:magneteng/magnet-sdk-ios-2.3.0.git'
     pod 'magnet-mobile-assets', :path => 'Source'
 
-This would install the Magnet Mobile Server for iOS and your generated mobile API in your project in the next step.
+This would install the Magnet Mobile Server for iOS and your generated mobile API in your project in the next step. At this stage, your Xcode project directory structure should look like this:
+![Create Project](https://dl.dropboxusercontent.com/u/25131624/Xcode-Project-Directory-Structure.png)
+
 
 #### Install dependencies
 If you haven't installed CocoaPods already, you can follow the installation instructions on their website: http://cocoapods.org
@@ -49,4 +51,4 @@ In your Xcode project directory, install the dependencies by running the followi
 
     $ pod install
     
-**Note**: Please note that if your installation fails, it may be because you are installing with a version of Git lower than CocoaPods is expecting. Please ensure that you are running Git >= 1.8.0 by executing git --version. You can get a full picture of the installation details by executing pod install --verbose.
+**Note**: Please note that if your installation fails, it may be because you are installing with a version of Git lower than CocoaPods is expecting. Please ensure that you are running Git >= 1.8.0 by executing `git --version`. You can get a full picture of the installation details by executing `pod install --verbose`.

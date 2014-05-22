@@ -11,9 +11,12 @@ In this tutorial, you will learn how to build a "Jumpstart" iOS app that interac
 
 ###2. Build the Mobile Backend
 
-To build the Jumpstart server, you can run the following command on the Mobile App Builder tool:
+#### Use the Mobile App Builder tool to first build a Mobile Backend server.
+The following command will automatically build a sample Mobile Backend server for the Jumpstart app that contains two controller APIs: Helloworld and basic Create/Read/Update/Delete for a sample Entity:
 
     jumpstart@local:mab> run jumpstart.mab
+
+You can also find detailed instructions for building the above Mobile Backend server from scratch here: [INSERT LINK]
 
 ###3. Create Xcode project
 Create a new Single View Application called "Jumpstart" using Xcode:

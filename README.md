@@ -65,17 +65,17 @@ Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of 
 
 #### Call the Helloworld controller API
 
-To call an API, follow these steps:
+To call the Helloworld controller API, follow these steps:
 
-###### Import the header
+###### Import the HelloWorldController header
     
     #import "HelloWorldController.h"
     
-###### Initialize the controller
+###### Initialize the HelloWorldController controller
 
     HelloWorldController *helloWorldController = [[HelloWorldController alloc] init];
     
-###### Call the controller
+###### Call the HelloWorldController controller
 
     [helloWorldController getHello:@"Magnet" options:nil success:^(NSString *response) {
         NSLog(@"response = %@", response); // executed if the Mobile Backend returns a valid response

@@ -82,3 +82,36 @@ To call the Helloworld controller API, follow these steps:
     } failure:^(NSError *error) {
         NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
     }];
+
+#### Call the SimpleEntity controller API
+
+To call the SimpleEntity controller API, follow these steps:
+
+###### Import the SimpleEntityController header
+    
+    #import "SimpleEntityController.h"
+    
+###### Initialize the SimpleEntityController controller
+
+    SimpleEntityController *simpleEntityController = [[SimpleEntityController alloc] init];
+    
+###### Call the SimpleEntityController controller
+
+    // Initialize a SimpleEntityBean
+    SimpleEntityBean *simpleEntityBean = [[SimpleEntityBean alloc] init];
+    simpleEntityBean.name = @"John Appleseed";
+    simpleEntityBean.customerId = arc4random() % 100000; // Generate a random customerId
+    
+    // Initialize a SimpleValueBean
+    SimpleValueBean *simpleValueBean = [[SimpleValueBean alloc] init];
+    simpleValueBean.boolean = NO;
+    simpleValueBean.character = @"c";
+    simpleValueBean.bigDecimal = [NSDecimalNumber decimalNumberWithString:@"1.0"];
+    simpleEntityBean.value = simpleValueBean;
+    
+    // Call the controller to create the SimpleEntityBean
+    [simpleEntityController create:simpleEntityBean options:nil success:^(int response) {
+        NSLog(@"response = %d", response); // executed if the Mobile Backend returns a valid response
+    } failure:^(NSError *error) {
+        NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
+    }];

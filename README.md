@@ -5,9 +5,9 @@ The Magnet Jumpstart App for iOS is licensed under the terms of the [Magnet Soft
 In this tutorial, you will learn how to build a "Jumpstart" iOS app that interacts with a "Jumpstart" Mobile Backend running locally.
 
 ###1. Prerequisites
-1. Mobile App Builder tool
+1. Mobile App Builder tool [provide link for MAB installation]
 2. Xcode 5
-3. CocoaPods
+3. CocoaPods [provide link for CocoaPods installation]
 
 ###2. Build the Mobile Backend
 

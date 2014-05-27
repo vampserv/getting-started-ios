@@ -65,7 +65,7 @@ Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of 
 
 #### Call the Helloworld controller API
 
-The HelloWorld controller API concatenates the string "Hello " with the input string argument and returns it. For example, given the input string argument "Magnet" it returns the string "Hello Magnet".
+The HelloWorld controller API concatenates the string `Hello ` with the input string argument and returns it. For example, given the input string argument `Magnet` it returns the string `Hello Magnet`.
 
 To call the Helloworld controller API, follow these steps:
 

@@ -12,7 +12,7 @@ In this tutorial, you will learn how to build a "Jumpstart" iOS app that interac
 ###2. Build the Mobile Backend
 
 #### Use the Mobile App Builder tool to first build a Mobile Backend server.
-The following command will automatically build a sample Mobile Backend server for the Jumpstart app that contains two controller APIs: Helloworld and basic operations like create, read, update and delete on a sample Entity:
+The following command will automatically build a sample Mobile Backend server for the Jumpstart app that contains two controller APIs: HelloWorld and basic operations like create, read, update and delete on a sample Entity:
 
     jumpstart@local:mab> run jumpstart.mab
 
@@ -63,11 +63,11 @@ Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of 
 
 ###4. Use the Mobile APIs
 
-#### Call the Helloworld controller API
+#### Call the HelloWorld controller API
 
 The HelloWorld controller API concatenates the string `Hello ` with the input string argument and returns it. For example, given the input string argument `Magnet` it returns the string `Hello Magnet`.
 
-To call the Helloworld controller API, follow these steps:
+To call the HelloWorld controller API, follow these steps:
 
 ###### Import the HelloWorldController header
     

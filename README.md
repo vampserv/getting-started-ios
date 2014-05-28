@@ -192,3 +192,11 @@ You can deploy the Mobile Backend server for the Jumpstart app to your local mac
 ###7. Run the app
 You are now ready to run the Jumpstart app on the iOS simulator using Xcode!
 
+###8. Where To Go From Here?
+You can download the completed project from [here](https://someurl.git) or clone this project using git:
+
+    $ git clone https://someurl.git
+    
+    
+
+

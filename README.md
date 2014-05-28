@@ -61,7 +61,7 @@ Make sure to always open the Xcode workspace `Jumpstart.xcworkspace` instead of 
     
     $ open Jumpstart.xcworkspace
 
-###4. Use the Mobile APIs
+###5. Use the Mobile APIs
 
 #### Call the HelloWorld controller API
 
@@ -119,3 +119,76 @@ To call the SimpleEntity controller API, follow these steps:
     } failure:^(NSError *error) {
         NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
     }];
+
+#### Sample code
+Add the above code snippets to ViewController.m as follows:
+
+    #import "ViewController.h"
+	// Import controller API headers
+	#import "HelloWorldController.h"
+	#import "SimpleEntityController.h"
+	#import "SimpleEntityBean.h"
+	#import "SimpleValueBean.h"
+
+	@interface ViewController ()
+
+	@end
+
+	@implementation ViewController
+
+	- (void)viewDidLoad
+	{
+	    [super viewDidLoad];
+	    // Call HelloWorldController
+	    [self callHelloWorldController];
+	    // Call SimpleEntityController
+	    [self callSimpleEntityController];
+	}
+
+	- (void)callHelloWorldController {
+	    // Initialize controller
+	    HelloWorldController *helloWorldController = [[HelloWorldController alloc] init];
+    
+	    // Call controller
+	    [helloWorldController getHello:@"Magnet" options:nil success:^(NSString *response) {
+	        NSLog(@"response = %@", response); // executed if the Mobile Backend returns a valid response
+	    } failure:^(NSError *error) {
+	        NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
+	    }];
+	}
+
+	- (void)callSimpleEntityController {
+	    // Initialize controller
+	    SimpleEntityController *simpleEntityController = [[SimpleEntityController alloc] init];
+    
+	    // Initialize a SimpleEntityBean
+	    SimpleEntityBean *simpleEntityBean = [[SimpleEntityBean alloc] init];
+	    simpleEntityBean.name = @"John Appleseed";
+	    simpleEntityBean.customerId = arc4random() % 100000; // Generate a random customerId
+    
+	    // Initialize a SimpleValueBean
+	    SimpleValueBean *simpleValueBean = [[SimpleValueBean alloc] init];
+	    simpleValueBean.boolean = NO;
+	    simpleValueBean.character = @"c";
+	    simpleValueBean.bigDecimal = [NSDecimalNumber decimalNumberWithString:@"1.0"];
+	    simpleEntityBean.value = simpleValueBean;
+    
+	    // Call the controller to create the SimpleEntityBean
+	    [simpleEntityController create:simpleEntityBean options:nil success:^(int response) {
+	        NSLog(@"response = %d", response); // executed if the Mobile Backend returns a valid response
+	    } failure:^(NSError *error) {
+	        NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
+	    }];
+	}
+
+    @end
+
+
+###6. Deploy the Mobile Backend
+You can deploy the Mobile Backend server for the Jumpstart app to your local machine by running the following command on the Mobile App Builder tool:
+
+    jumpstart@local:mab> server-start
+    
+###7. Run the app
+You are now ready to run the Jumpstart app on the iOS simulator using Xcode!
+

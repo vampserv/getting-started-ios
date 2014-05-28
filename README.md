@@ -120,8 +120,8 @@ To call the SimpleEntity controller API, follow these steps:
         NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
     }];
 
-#### Sample code
-Add the above code snippets to ViewController.m as follows:
+#### Putting it together
+You can call the HelloWorld and SimpleEntity controller APIs by adding the code below to `ViewController.m`:
 
     #import "ViewController.h"
 	// Import controller API headers
@@ -129,13 +129,13 @@ Add the above code snippets to ViewController.m as follows:
 	#import "SimpleEntityController.h"
 	#import "SimpleEntityBean.h"
 	#import "SimpleValueBean.h"
-
+	
 	@interface ViewController ()
-
+	
 	@end
-
+	
 	@implementation ViewController
-
+	
 	- (void)viewDidLoad
 	{
 	    [super viewDidLoad];
@@ -144,11 +144,11 @@ Add the above code snippets to ViewController.m as follows:
 	    // Call SimpleEntityController
 	    [self callSimpleEntityController];
 	}
-
+	
 	- (void)callHelloWorldController {
 	    // Initialize controller
 	    HelloWorldController *helloWorldController = [[HelloWorldController alloc] init];
-    
+	
 	    // Call controller
 	    [helloWorldController getHello:@"Magnet" options:nil success:^(NSString *response) {
 	        NSLog(@"response = %@", response); // executed if the Mobile Backend returns a valid response
@@ -156,23 +156,23 @@ Add the above code snippets to ViewController.m as follows:
 	        NSLog(@"error = %@", error); // executed if the Mobile Backend returns an error
 	    }];
 	}
-
+	
 	- (void)callSimpleEntityController {
 	    // Initialize controller
 	    SimpleEntityController *simpleEntityController = [[SimpleEntityController alloc] init];
-    
+	
 	    // Initialize a SimpleEntityBean
 	    SimpleEntityBean *simpleEntityBean = [[SimpleEntityBean alloc] init];
 	    simpleEntityBean.name = @"John Appleseed";
 	    simpleEntityBean.customerId = arc4random() % 100000; // Generate a random customerId
-    
+	
 	    // Initialize a SimpleValueBean
 	    SimpleValueBean *simpleValueBean = [[SimpleValueBean alloc] init];
 	    simpleValueBean.boolean = NO;
 	    simpleValueBean.character = @"c";
 	    simpleValueBean.bigDecimal = [NSDecimalNumber decimalNumberWithString:@"1.0"];
 	    simpleEntityBean.value = simpleValueBean;
-    
+	
 	    // Call the controller to create the SimpleEntityBean
 	    [simpleEntityController create:simpleEntityBean options:nil success:^(int response) {
 	        NSLog(@"response = %d", response); // executed if the Mobile Backend returns a valid response
